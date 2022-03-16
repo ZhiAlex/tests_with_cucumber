@@ -15,12 +15,12 @@ public class CalcTests {
         calc = new Calc(a, b, sign);
     }
 
-    @Тогда("^находим результат операции")
+    @Тогда("находим результат операции")
     public void calculate() {
         result = calc.getResult();
     }
 
-    @И("^вывод результата$")
+    @И("вывод результата$")
     public void printResult() {
         System.out.println(calc.getA() + calc.getSign() + calc.getB() + "=" + result);
     }
