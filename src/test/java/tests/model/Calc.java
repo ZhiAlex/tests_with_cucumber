@@ -13,13 +13,13 @@ public class Calc {
     }
 
     public double getResult() {
-        return switch (sign) {
-            case "-" -> a - b;
-            case "+" -> a + b;
-            case "*" -> a * b;
-            case "/" -> a / b;
-            default -> throw new IllegalArgumentException("incorrect arithmetic sign entered");
-        };
+        switch (sign){
+            case "-": return a - b;
+            case "+": return a + b;
+            case "*": return a * b;
+            case "/": return a / b;
+            default: throw new IllegalArgumentException("incorrect arithmetic sign entered");
+        }
     }
 
     public double getA() {
